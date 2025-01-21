@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+// Update the BASE_URL to the hosted backend on Render
+const BASE_URL = "https://social-submission.onrender.com";
 
 export const fetchAllForms = async (token) => {
   const response = await axios.get(`${BASE_URL}/forms/all`, {
