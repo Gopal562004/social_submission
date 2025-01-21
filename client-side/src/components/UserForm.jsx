@@ -8,6 +8,7 @@ function UserForm() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   // Check if user is authenticated
   useEffect(() => {
@@ -35,7 +36,7 @@ function UserForm() {
     const token = localStorage.getItem("social_token");
 
     try {
-      const response = await fetch("https://social-submission.onrender.com/forms/submit", {
+      const response = await fetch(`${BASE_URL}/forms/submit`, {
         method: "POST",
         body: formData,
         headers: {
