@@ -35,7 +35,7 @@ function UserForm() {
     const token = localStorage.getItem("social_token");
 
     try {
-      const response = await fetch("http://localhost:5000/forms/submit", {
+      const response = await fetch("https://social-submission.onrender.com/forms/submit", {
         method: "POST",
         body: formData,
         headers: {
