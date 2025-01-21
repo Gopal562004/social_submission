@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Base API URL
-const BASE_URL = "http://localhost:5000/users";
+const BASE_URL = "https://social-submission.onrender.com/users";
 
 // Login API for users
 export const loginUser = async (email, password) => {
@@ -17,12 +17,13 @@ export const loginAdmin = async (email, password) => {
   });
   return response.data; // Return response data
 };
-//signup
+
+// Signup API
 export const signup = async (email, password, role) => {
   try {
     const response = await axios.post(`${BASE_URL}/signup`, {
       email,
-      password
+      password,
     });
 
     return response.data; // Return the response data (including token)
