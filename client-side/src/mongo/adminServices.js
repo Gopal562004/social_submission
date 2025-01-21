@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Update the BASE_URL to the hosted backend on Render
-const BASE_URL = "https://social-submission.onrender.com";
+// Fetch the BASE_URL from environment variables
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const fetchAllForms = async (token) => {
   const response = await axios.get(`${BASE_URL}/forms/all`, {
