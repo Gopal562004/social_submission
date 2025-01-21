@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Base API URL
-const BASE_URL = "https://social-submission.onrender.com/users";
+// Base API URL from .env file
+const BASE_URL = process.env.REACT_APP_BASE_URL + "/users";
 
 // Login API for users
 export const loginUser = async (email, password) => {
